@@ -1,67 +1,7 @@
 {% extends "layout.njk" %}
 
-{% block head %}
-    <title>{{recipes.title}}</title>
-{% endblock head %}
 
 {% block content %}
 
-    <section class="details_recipe">
-        <img src="{{recipes.image}}" alt="Imagem de {{recipes.title}}">
 
-        <h3>{{recipes.title}}</h3>
-        <h4>{{recipes.author}}</h4>
-
-        <div class="details">
-            <ul class="pre_ing_info">
-
-                <div class="button_content">
-                    <h1>Ingredientes</h1>
-                    <a class="button_hide">MOSTRAR</a>
-                </div>
-
-                <div class="content">
-                    {% for ingredients in recipes.ingredients %}
-                        <li>{{ingredients}}</li>
-                    {% endfor %}
-                </div>
-
-            </ul>
-
-            <ul class="pre_ing_info">
-
-                <div class="button_content">
-                    <h1>Modo de Preparo</h1>
-                    <a class="button_hide">MOSTRAR</a>
-                </div>
-
-                <div class="content">
-                    {% for preparation in recipes.ingredients%}
-                        <li>{{preparation}}</li>
-                    {% endfor %}
-                </div>
-            </ul>
-            <div class="pre_ing_info">
-                <div class="button_content">
-                    <h1>Informaçoes adcionais</h1>
-                    <a class="button_hide">MOSTRAR</a>
-                </div>
-
-                <div class="content">
-                    <p>{{recipes.information}}</p>
-                </div>
-            </div>
-
-
-
-            <div >
-
-            </div>
-
-
-
-        </div>
-    </section>
-
-    <script src="/scripts/scripts.js"></script>
 {% endblock content %}
