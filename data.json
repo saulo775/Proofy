@@ -1,0 +1,13 @@
+{
+    "teachers": [
+        {
+            "id": 1,
+            "avatar_url": "https://rocketseat/skylab",
+            "name": "saulo victor oliveira mendes",
+            "birth": 810864000000,
+            "schooling": "medio",
+            "class_type": "presencial",
+            "atuacao": "vender pão, jogar baralho"
+        }
+    ]
+}

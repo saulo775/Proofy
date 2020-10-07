@@ -2,7 +2,7 @@
 
 
 :root {
-    --primary-color: rgba(105, 0, 109, 0.404);
+    --primary-color: rgb(70, 70, 70);
     --secondary-color: rgb(255, 217, 0);
 }
 
@@ -19,6 +19,7 @@ a {
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--primary-color);
+
 }
 
 nav {
@@ -95,13 +96,9 @@ nav {
 }
 
 .avatar {
-    background: url(https://source.unsplash.com/collection/489203/500x500) no-repeat top center / cover;
+    background: url(https://source.unsplash.com/collection/489203/400x400) no-repeat top center / cover;
     width: 100%;
     height: 100%;
-
-}
-
-.details {
 
 }
 
@@ -149,8 +146,21 @@ nav {
     border: var(--secondary-color) solid 2px;
 }
 
-.details .item span:hover {
-    color: rgb(83, 83, 83);
-    border: var(--secondary-color) solid 2px;
-    background-color: white;
+.details .item input {
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+}
+.details .item input[type=radio] {
+    width: initial;
+    margin-right: 4px;
+}
+
+.details button {
+    background-color: var(--secondary-color);
+    margin: 24px 0;
+    padding: 8px 16px;
+    width: 100%;
+    color: white;
+    font-size: 24px;
 }
