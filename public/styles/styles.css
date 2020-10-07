@@ -2,8 +2,8 @@
 
 
 :root {
-    --primary-color: gold;
-    --secondary-color: rgb(252, 225, 71);
+    --primary-color: rgba(105, 0, 109, 0.404);
+    --secondary-color: rgb(255, 217, 0);
 }
 
 * {
@@ -18,11 +18,11 @@ a {
 }
 body {
     font-family: 'Roboto', sans-serif;
-    display: flex;
+    background-color: var(--primary-color);
 }
 
 nav {
-    display: fle;
+    display: flex;
     width: 100vw;
     padding: 4vh 0;
     justify-content: center;
@@ -63,4 +63,94 @@ nav {
 .header a:hover::after {
     width: 100%;
     transition: width 500ms ease-in-out;
+}
+
+
+/*==== Card ====*/
+
+.card {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    width: 65%;
+    min-height: 400px;
+    background-color: white;
+    margin: 25px auto 0;
+
+
+    box-shadow: rgb(59, 59, 59) 4px 4px 6px -1px;
+
+    animation-name: up;
+    animation-duration: 500ms;
+
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.avatar {
+    background: url(https://source.unsplash.com/collection/489203/500x500) no-repeat top center / cover;
+    width: 100%;
+    height: 100%;
+
+}
+
+.details {
+
+}
+
+.details {
+    padding:0 40px;
+}
+
+.details h2 {
+    color: rgb(233, 98, 98);
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 32px;
+    margin-top: 24px;
+}
+
+.details .item {
+    border-bottom: double 1px #9e9e9e;
+    margin-top: 20px;
+}
+
+.details .item:last-child {
+    border-bottom: none;
+    margin-bottom: 16px;
+}
+
+.details .item div:first-child {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(0, 138, 180);
+}
+.details .item div:nth-child(2) {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 4px;
+    color: rgb(83, 83, 83);
+}
+
+.details .item span {
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 16px;
+    padding: 4px 24px;
+    font-size: 20px;
+    display: inline-block;
+    border: var(--secondary-color) solid 2px;
+}
+
+.details .item span:hover {
+    color: rgb(83, 83, 83);
+    border: var(--secondary-color) solid 2px;
+    background-color: white;
 }
