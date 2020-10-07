@@ -2,12 +2,23 @@
     "teachers": [
         {
             "id": 1,
-            "avatar_url": "https://rocketseat/skylab",
+            "avatar_url": "https://images.unsplash.com/photo-1568125076340-0d8583695b3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=660&q=80",
             "name": "saulo victor oliveira mendes",
             "birth": 810864000000,
-            "schooling": "medio",
+            "schooling": "doutorado",
             "class_type": "presencial",
-            "atuacao": "vender pão, jogar baralho"
+            "atuacao": "vender pão, jogar baralho, invocar boinas",
+            "created_at": 1602100910995
+        },
+        {
+            "id": 2,
+            "avatar_url": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+            "name": "Rannyere",
+            "birth": 810864000000,
+            "schooling": "superior",
+            "class_type": "distancia",
+            "atuacao": "vender lolo",
+            "created_at": 1602106600282
         }
     ]
 }
