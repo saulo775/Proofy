@@ -11,7 +11,23 @@ exports.age =  function (timestamp){
         }
 
         return age
+}
+
+exports.date = function(timestamp){
+    const date = new Date(timestamp)
+    const year = date.getUTCFullYear()
+    const month = `0${date.getUTCMonth() + 1}`.slice(-2)
+    const day = `0${date.getUTCDate()}`.slice(-2)
+
+    return {
+    day,
+    month,
+    year,
+    iso: `${year}-${month}-${day}`,
+    birthDay: `${day}/${month}`
     }
+}
+
 
 exports.graduation = function graduation(schooling){
         if (schooling === "medio"){
@@ -26,4 +42,4 @@ exports.graduation = function graduation(schooling){
             return
         }
 
-    }
+}

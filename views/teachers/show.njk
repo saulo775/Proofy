@@ -1,4 +1,4 @@
-{% extends "layout.njk" %}
+{% extends "teachers/layout.njk" %}
 
 
 {% block content %}
@@ -32,7 +32,7 @@
                 <div>Tipo de aula</div>
                 <div><span>{{teachers.class_type}}</span></div>
             </div>
-            <div class="item">
+            <div class="item aux">
                 <div>Matérias ofertadas</div>
                 <div>
                     {% for service in teachers.services %}
@@ -40,6 +40,16 @@
                     {% endfor %}
                 </div>
             </div>
+
+            <div class="buttons">
+                <a href="/teachers/{{teachers.id}}/edit" class="button_editar">Editar</a>
+
+                <form  method="POST" action="/teachers?_method=DELETE" >
+                    <button type="submit" class="button_deletar">Deletar</button>
+                    <input type="hidden" name="id" value="{{teachers.id}}">
+                </form>
+            </div>
+
 
         </section>
     </div>
