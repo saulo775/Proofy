@@ -4,9 +4,7 @@ const utils  = require('../utils')
 
 //index
 exports.index = function (req, res) {
-
-
-    return res.render("teachers/index", {teachers: data.teachers})
+    return res.render("teachers/teachers", {teachers: data.teachers})
 }
 
 //show

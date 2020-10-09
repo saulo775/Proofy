@@ -1,4 +1,4 @@
-{% extends "teachers/layout.njk" %}
+{% extends "layout.njk" %}
 
 
 {% block content %}
@@ -44,13 +44,15 @@
             <div class="buttons">
                 <a href="/teachers/{{teachers.id}}/edit" class="button_editar">Editar</a>
 
-                <form  method="POST" action="/teachers?_method=DELETE" >
+                <form id="form_delete" method="POST" action="/teachers?_method=DELETE" >
                     <button type="submit" class="button_deletar">Deletar</button>
                     <input type="hidden" name="id" value="{{teachers.id}}">
                 </form>
-            </div>
 
+                <script src="../public/scripts/scripts.js"></script>
+            </div>
 
         </section>
     </div>
+
 {% endblock content %}

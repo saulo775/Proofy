@@ -6,16 +6,16 @@ const students = require('./controllers/students')
 
 
 /*==== TEACHERS =====*/
+routes.get("/", function(req, res){
+    return res.redirect("teachers")
+ })
 
-routes.get("/teachers", function(req, res){
-    return res.render("teachers/teachers")
-})
 
 routes.get("/teachers/create", function(req, res){
     return res.render("teachers/create")
 })
 
-routes.get("/", teachers.index)
+routes.get("/teachers", teachers.index)
 
 routes.get("/teachers/:id", teachers.show)
 
@@ -34,15 +34,13 @@ routes.delete('/teachers', teachers.delete)
 /*====############ STUDENTS ###########=====*/
 
 
-routes.get("/students", function(req, res){
-    return res.render("students/students")
-})
+
 
 routes.get("/students/create", function(req, res){
     return res.render("students/create")
 })
 
-routes.get("/", students.index)
+routes.get("/students", students.index)
 
 routes.get("/students/:id", students.show)
 

@@ -6,7 +6,7 @@ const utils  = require('../utils')
 exports.index = function (req, res) {
 
 
-    return res.render("students/index", {students: data.students})
+    return res.render("students/students", {students: data.students})
 }
 
 //show
@@ -22,7 +22,7 @@ exports.show = function (req, res) {
     const students = {
         ...foundStudent,
         age: utils.age(foundStudent.birth),
-        grade: utils.grade(foundStudent.school_year)
+        grade: utils.grade(foundStudent.s)
     }
     return res.render("students/show",{students})
 }

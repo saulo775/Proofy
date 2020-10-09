@@ -1,22 +1,22 @@
-{% extends "teachers/layout.njk" %}
+{% extends "layout.njk" %}
 
 {% block content %}
 
-    <form class="card" method="POST" action="/teachers?_method=PUT" >
+    <form class="card" method="POST" action="/students?_method=PUT" >
         <section
             class="avatar"
-            style="background: url({{teachers.avatar_url}}) no-repeat top center / cover;">
+            style="background: url({{students.avatar_url}}) no-repeat top center / cover;">
 
         </section>
         <section class="details">
-            <h2>Editar Professor</h2>
+            <h2>Editar Aluno</h2>
 
-            {% include "teachers/fields.njk" %}
+            {% include "students/fields.njk" %}
 
             <input
                 type="hidden"
                 name="id"
-                value="{{teachers.id}}">
+                value="{{students.id}}">
         </section>
     </form>
 {% endblock content %}
