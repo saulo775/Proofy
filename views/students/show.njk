@@ -1,11 +1,11 @@
-{% extends "teachers/layout.njk" %}
+{% extends "students/layout.njk" %}
 
 
 {% block content %}
     <div class="card">
         <section
             class="avatar"
-            style="background: url({{teachers.avatar_url}}) no-repeat top center / cover;">
+            style="background: url({{students.avatar_url}}) no-repeat top center / cover;">
 
         </section>
 
@@ -13,40 +13,32 @@
             <h2>Detalhes</h2>
 
             <div class="item">
-                <div>Professor</div>
-                <div>{{teachers.name}}</div>
+                <div>Nome</div>
+                <div>{{students.name}}</div>
             </div>
             <div class="item">
                 <div>Idade</div>
-                <div>{{teachers.age}}</div>
+                <div>{{students.age}}</div>
             </div>
             <div class="item">
-                <div>Escolaridade</div>
-                <div>{{teachers.graduation}}</div>
+                <div>E-Mail</div>
+                <div>{{students.email}}</div>
             </div>
             <div class="item">
-                <div>Desde</div>
-                <div>{{teachers.created_at}}</div>
+                <div>Ano escolar</div>
+                <div>{{students.grade}}</div>
             </div>
             <div class="item">
-                <div>Tipo de aula</div>
-                <div><span>{{teachers.class_type}}</span></div>
-            </div>
-            <div class="item aux">
-                <div>Matérias ofertadas</div>
-                <div>
-                    {% for service in teachers.services %}
-                        <span>{{service}}</span>
-                    {% endfor %}
-                </div>
+                <div>Carga horária semanal</div>
+                <div><span>{{students.workload}} horas</span></div>
             </div>
 
             <div class="buttons">
-                <a href="/teachers/{{teachers.id}}/edit" class="button_editar">Editar</a>
+                <a href="/students/{{students.id}}/edit" class="button_editar">Editar</a>
 
-                <form  method="POST" action="/teachers?_method=DELETE" >
+                <form  method="POST" action="/students?_method=DELETE" >
                     <button type="submit" class="button_deletar">Deletar</button>
-                    <input type="hidden" name="id" value="{{teachers.id}}">
+                    <input type="hidden" name="id" value="{{students.id}}">
                 </form>
             </div>
 

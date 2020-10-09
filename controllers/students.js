@@ -22,9 +22,7 @@ exports.show = function (req, res) {
     const students = {
         ...foundStudent,
         age: utils.age(foundStudent.birth),
-        graduation: utils.graduation(foundStudent.schooling),
-        created_at:new Intl.DateTimeFormat("pt-BR").format(foundStudent.created_at),
-        services: foundStudent.atuacao.split(", "),
+        grade: utils.grade(foundStudent.school_year)
     }
     return res.render("students/show",{students})
 }
@@ -39,21 +37,19 @@ exports.post = function (req, res) {
             return res.send("Please fill all fields!!!")
     }
 
-    let {avatar_url, name, birth, schooling, class_type, atuacao} = req.body
+    let {avatar_url, name, birth, email, school_year, workload} = req.body
 
     birth = Date.parse(birth)
     const id = Number(data.students.length + 1)
-    const created_at = Date.now()
 
     data.students.push({
         id,
         avatar_url,
         name,
         birth,
-        schooling,
-        class_type,
-        atuacao,
-        created_at
+        email,
+        school_year,
+        workload
     })
 
     fs.writeFile("data.json", JSON.stringify(data, null, 4), function(err) {

@@ -43,3 +43,21 @@ exports.graduation = function graduation(schooling){
         }
 
 }
+
+exports.grade = function grade(school_year){
+    if (school_year === "5F"){
+        return "5º ano do ensino fundamental"
+    }else if (school_year === "6F"){
+        return "6º ano do ensino fundamental"
+    }else if (school_year === "7F"){
+        return "7º ano do ensino fundamental"
+    }else if (school_year === "8F"){
+        return "8º ano do ensino fundamental"
+    }else if (school_year === "1M"){
+        return "1º ano do ensino médio"
+    }else if (school_year === "2M"){
+        return "2º ano do ensino médio"
+    }else if (school_year === "3M"){
+        return "3º ano do ensino médio"
+    }
+}
