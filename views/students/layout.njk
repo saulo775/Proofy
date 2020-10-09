@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/styles/styles.css">
+
+    </head>
+
+    <body>
+        <div class="container_flex">
+            <nav class="header">
+                <a class="active" href="/teachers">Teachers</a>
+                <a href="/students">Students</a>
+            </nav>
+
+            <section>
+                {% block content %}
+
+                    <div class="card">
+                        <section class="avatar">
+
+                        </section>
+
+                        <section class="details">
+                            <h2>Detalhes</h2>
+
+                            <div class="item">
+                                <div>Nome completo</div>
+                                <div>Saulo Victor Oliveira Mendes</div>
+                            </div>
+                            <div class="item">
+                                <div>Idade</div>
+                                <div>25 anos</div>
+                            </div>
+                            <div class="item">
+                                <div>Escolaridade</div>
+                                <div>Ensino Superior</div>
+                            </div>
+                            <div class="item">
+                                <div>Tipo de aula</div>
+                                <div>Presencial</div>
+                            </div>
+                            <div class="item">
+                                <div>Acompanhamento</div>
+                                <div><span>Matemática</span> <span>Física</span> </div>
+                            </div>
+                            <div class="item aux">
+                                <div>Desde</div>
+                                <div>12/09/1995</div>
+                            </div>
+
+                        </section>
+                    </div>
+                {% endblock content %}
+
+
+            </section>
+
+        </div>
+
+    </body>
+
+
+</html>

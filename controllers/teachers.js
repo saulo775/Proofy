@@ -1,7 +1,13 @@
 const fs = require('fs')
-const data = require('./data.json')
-const  utils  = require('./utils')
+const data = require('../data.json')
+const utils  = require('../utils')
 
+//index
+exports.index = function (req, res) {
+
+
+    return res.render("teachers/index", {teachers: data.teachers})
+}
 
 //show
 exports.show = function (req, res) {
@@ -92,7 +98,8 @@ exports.put = function(req, res){
     const teachers = {
         ...foundTeacher,
         ...req.body,
-        birth: utils.date(foundTeacher.birth).iso
+        birth: utils.date(foundTeacher.birth).iso,
+        id: Number(req.body.id)
 
         //birth: Date.parse(req.body.birth)
     }

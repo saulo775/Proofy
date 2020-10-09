@@ -1,7 +1,7 @@
 {
     "teachers": [
         {
-            "id": "1",
+            "id": 1,
             "avatar_url": "https://images.unsplash.com/photo-1568125076340-0d8583695b3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=660&q=80",
             "name": "saulo victor",
             "birth": "1995-09-12",
@@ -11,7 +11,7 @@
             "created_at": 1602100910995
         },
         {
-            "id": "2",
+            "id": 2,
             "avatar_url": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
             "name": "Rannyere Santiago",
             "birth": "1995-09-12",
@@ -19,6 +19,35 @@
             "class_type": "distancia",
             "atuacao": "vender lolo",
             "created_at": 1602106600282
+        },
+        {
+            "id": 3,
+            "avatar_url": "https://images.unsplash.com/photo-1568125076340-0d8583695b3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=660&q=80",
+            "name": "bigobau",
+            "birth": -618969600000,
+            "schooling": "doutorado",
+            "class_type": "distancia",
+            "atuacao": "adestrar amendoas, gerenciar gel de cabelo",
+            "created_at": 1602176550237
+        },
+        {
+            "id": 4,
+            "avatar_url": "https://images.unsplash.com/photo-1568125076340-0d8583695b3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=660&q=80",
+            "name": "salim ",
+            "birth": "2011-02-18",
+            "schooling": "medio",
+            "class_type": "presencial",
+            "atuacao": "vender pão",
+            "created_at": 1602178594635
+        }
+    ],
+    "students": [
+        {
+            "id": 1,
+            "avatar_url": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+            "name": "cleitin ",
+            "birth": 1421798400000,
+            "created_at": 1602250274313
         }
     ]
 }

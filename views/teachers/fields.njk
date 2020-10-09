@@ -73,14 +73,18 @@
                 {% if teachers.class_type == 'distancia'%}
                     checked
                 {% endif %}
-            >distancia
+            >A distancia
         </span>
     </div>
 </div>
 <div class="item aux">
     <div>Área de atuação</div>
     <div>
-        <input type="text" name="atuacao" placeholder="Escreva suas areas de atuação separadas por vírgula" value="{{teachers.atuacao}}" >
+        <input
+            type="text"
+            name="atuacao"
+            placeholder="Escreva suas areas de atuação separadas por vírgula"
+            value="{{teachers.atuacao}}" >
     </div>
 </div>
 

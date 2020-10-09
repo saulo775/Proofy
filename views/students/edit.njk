@@ -1,0 +1,22 @@
+{% extends "teachers/layout.njk" %}
+
+{% block content %}
+
+    <form class="card" method="POST" action="/teachers?_method=PUT" >
+        <section
+            class="avatar"
+            style="background: url({{teachers.avatar_url}}) no-repeat top center / cover;">
+
+        </section>
+        <section class="details">
+            <h2>Editar Professor</h2>
+
+            {% include "teachers/fields.njk" %}
+
+            <input
+                type="hidden"
+                name="id"
+                value="{{teachers.id}}">
+        </section>
+    </form>
+{% endblock content %}

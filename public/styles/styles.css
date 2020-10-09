@@ -2,7 +2,7 @@
 
 
 :root {
-    --primary-color: rgb(70, 70, 70);
+    --primary-color: rgb(18, 18, 20);
     --secondary-color: rgb(255, 217, 0);
     --three-color: rgb(122, 6, 84);
     --button-color: rgb(73, 195, 252);
@@ -32,7 +32,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(59, 59, 59);
+    background-color: rgb(32, 32, 36);
 }
 
 .header a {
@@ -79,7 +79,7 @@ nav {
     background-color: white;
     margin: 25px auto 0;
 
-    box-shadow: rgb(59, 59, 59) 4px 4px 6px -1px;
+    box-shadow: rgb(184, 184, 184) 6px 6px 8px -1px;
     animation-name: up;
     animation-duration: 500ms;
 
@@ -193,4 +193,59 @@ nav {
     box-sizing: border-box;
     outline: none;
     border: solid 2px rgb(192, 0, 0);
+}
+
+/*===== INDEX ======*/
+
+
+.index {
+    display: grid;
+    grid-template-columns: 100% 0fr;
+    padding: 24px 36px;
+}
+
+.index table {
+    border-spacing: none;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.index tr th {
+    text-transform: uppercase;
+    color: #4d4d4d;
+}
+
+.index thead tr th:last-child  {
+    text-align: left;
+}
+
+.index tr td {
+    padding: 16px 0 4px 0;
+    border-bottom: #d6d6d6 solid 1px;
+    align-items: center;
+}
+
+
+.index tr td:first-child  {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+}
+
+.index tr td:first-child span {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-items: center;
+    border: solid 1px white;
+    box-shadow: black 2px 2px 4px -1px;
+}
+
+.index tr td:last-child a {
+    background-color: var(--three-color);
+    padding: 8px 16px;
+    color: white;
+    text-transform: uppercase;
+}
+
+thead tr {
+    text-align: left;
 }
